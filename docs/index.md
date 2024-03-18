@@ -6,7 +6,7 @@ hero:
 
 ## Demo
 
-<code src="../src/demos/basic.tsx" iframe></code>
+<code src="../src/demos/basic.tsx" iframe defaultShowCode></code>
 
 ## API
 
