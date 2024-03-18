@@ -35,3 +35,5 @@ export declare function usePrint({ className }?: ContainerOptions): {
 };
 export {};
 ```
+
+For an explanation of the underlying principles, visit [this link](https://blog.bowen.cool/posts/way-to-print-partial-html-page).
