@@ -8,7 +8,15 @@ interface ElementsHolderRef {
 }
 
 interface PrintReactNode {
-  (content: React.ReactNode, options?: { title?: string }): Promise<void>;
+  (
+    /** content you want to print */
+    content: React.ReactNode,
+    /** options you want to custom */
+    options?: {
+      /** document title when printing */
+      title?: string;
+    },
+  ): Promise<void>;
 }
 
 const ElementsHolder = React.memo(
@@ -30,6 +38,7 @@ const ElementsHolder = React.memo(
 );
 
 type ContainerOptions = {
+  /** className you want to attach to the content */
   className?: string;
 };
 
@@ -65,6 +74,7 @@ body > * {
 export function usePrint({ className }: ContainerOptions = {}): {
   /** This holder ensures that the content to be printed accurately receives the context values. */
   holder: React.ReactElement;
+  /** Print ReactNode directly */
   printReactNode: PrintReactNode;
 } {
   const holderRef = React.useRef<ElementsHolderRef>(null);
