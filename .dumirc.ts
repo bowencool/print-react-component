@@ -3,6 +3,7 @@ import { defineConfig } from 'dumi';
 export default defineConfig({
   outputPath: 'docs-dist',
   base: '/print-react-component/',
+  publicPath: '/print-react-component/',
   locales: [{ id: 'en-US', name: 'English' }],
   themeConfig: {
     name: 'Print React Component',
